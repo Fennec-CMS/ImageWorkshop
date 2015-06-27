@@ -1,8 +1,8 @@
 <?php
 
-namespace PHPImageWorkshop\Core\Exception;
+namespace Fennec\Library\PHPImageWorkshop\Core\Exception;
 
-use PHPImageWorkshop\Exception\ImageWorkshopBaseException as ImageWorkshopBaseException;
+use Fennec\Library\PHPImageWorkshop\Exception\ImageWorkshopBaseException as ImageWorkshopBaseException;
 
 // If no autoloader, uncomment these lines:
 //require_once(__DIR__.'/../../Exception/ImageWorkshopBaseException.php');

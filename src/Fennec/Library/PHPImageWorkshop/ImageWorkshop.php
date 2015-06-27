@@ -1,10 +1,10 @@
 <?php
 
-namespace PHPImageWorkshop;
+namespace Fennec\Library\PHPImageWorkshop;
 
-use PHPImageWorkshop\Core\ImageWorkshopLayer as ImageWorkshopLayer;
-use PHPImageWorkshop\Core\ImageWorkshopLib as ImageWorkshopLib;
-use PHPImageWorkshop\Exception\ImageWorkshopException as ImageWorkshopException;
+use Fennec\Library\PHPImageWorkshop\Core\ImageWorkshopLayer as ImageWorkshopLayer;
+use Fennec\Library\PHPImageWorkshop\Core\ImageWorkshopLib as ImageWorkshopLib;
+use Fennec\Library\PHPImageWorkshop\Exception\ImageWorkshopException as ImageWorkshopException;
 
 // If no autoloader, uncomment these lines:
 //require_once(__DIR__.'/Core/ImageWorkshopLayer.php');
@@ -13,7 +13,7 @@ use PHPImageWorkshop\Exception\ImageWorkshopException as ImageWorkshopException;
 /**
  * ImageWorkshop class
  * 
- * Use this class as a factory to initialize ImageWorkshop layers
+ * use Fennec\Library\this class as a factory to initialize ImageWorkshop layers
  *
  * @version 2.0.6
  * @link http://phpimageworkshop.com

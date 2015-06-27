@@ -1,6 +1,6 @@
 <?php
 
-namespace PHPImageWorkshop\Exception;
+namespace Fennec\Library\PHPImageWorkshop\Exception;
 
 /**
  * ImageWorkshopBaseException

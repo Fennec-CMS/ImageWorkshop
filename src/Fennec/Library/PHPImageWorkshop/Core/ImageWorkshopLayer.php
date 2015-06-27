@@ -1,11 +1,11 @@
 <?php
 
-namespace PHPImageWorkshop\Core;
+namespace Fennec\Library\PHPImageWorkshop\Core;
 
-use PHPImageWorkshop\Exif\ExifOrientations;
-use PHPImageWorkshop\ImageWorkshop as ImageWorkshop;
-use PHPImageWorkshop\Core\ImageWorkshopLib as ImageWorkshopLib;
-use PHPImageWorkshop\Core\Exception\ImageWorkshopLayerException as ImageWorkshopLayerException;
+use Fennec\Library\PHPImageWorkshop\Exif\ExifOrientations;
+use Fennec\Library\PHPImageWorkshop\ImageWorkshop as ImageWorkshop;
+use Fennec\Library\PHPImageWorkshop\Core\ImageWorkshopLib as ImageWorkshopLib;
+use Fennec\Library\PHPImageWorkshop\Core\Exception\ImageWorkshopLayerException as ImageWorkshopLayerException;
 
 // If no autoloader, uncomment these lines:
 //require_once(__DIR__.'/../ImageWorkshop.php');
@@ -174,8 +174,8 @@ class ImageWorkshopLayer
     }
 
     /**
-     * Clone method: use it if you want to reuse an existing ImageWorkshop object in another variable
-     * This is important because img resource var references all the same image in PHP.
+     * Clone method: use Fennec\Library\it if you want to reuse an existing ImageWorkshop object in another variable
+     * This is important because Fennec\Library\img resource var references all the same image in PHP.
      * Example: $b = clone $a; (never do $b = $a;)
      */
     public function __clone()
@@ -518,7 +518,7 @@ class ImageWorkshopLayer
      * You can specify the position left (in pixels) and the position top (in pixels) of the added image relatives to the layer
      * Otherwise, it will be set at 0 and 0
      *
-     * @param string $unit Use one of `UNIT_*` constants, "UNIT_PIXEL" by default
+     * @param string $unit use Fennec\Library\one of `UNIT_*` constants, "UNIT_PIXEL" by default
      * @param resource $image
      * @param integer $positionX
      * @param integer $positionY
@@ -733,7 +733,7 @@ class ImageWorkshopLayer
     /**
      * Resize the layer
      *
-     * @param string $unit Use one of `UNIT_*` constants, "UNIT_PIXEL" by default
+     * @param string $unit use Fennec\Library\one of `UNIT_*` constants, "UNIT_PIXEL" by default
      * @param mixed $newWidth (integer or float)
      * @param mixed $newHeight (integer or float)
      * @param boolean $converseProportion
@@ -1016,7 +1016,7 @@ class ImageWorkshopLayer
     public function crop($unit = self::UNIT_PIXEL, $width = 0, $height = 0, $positionX = 0, $positionY = 0, $position = 'LT')
     {
         if ($width < 0 || $height < 0) {
-            throw new ImageWorkshopLayerException('You can\'t use negative $width or $height for "'.__METHOD__.'" method.', static::ERROR_NEGATIVE_NUMBER_USED);
+            throw new ImageWorkshopLayerException('You can\'t use Fennec\Library\negative $width or $height for "'.__METHOD__.'" method.', static::ERROR_NEGATIVE_NUMBER_USED);
         }
         
         if ($unit == self::UNIT_PERCENT) {
@@ -1111,7 +1111,7 @@ class ImageWorkshopLayer
     public function cropToAspectRatio($unit = self::UNIT_PIXEL, $width = 0, $height = 0, $positionX = 0, $positionY = 0, $position = 'LT')
     {
         if ($width < 0 || $height < 0) {
-            throw new ImageWorkshopLayerException('You can\'t use negative $width or $height for "'.__METHOD__.'" method.', static::ERROR_NEGATIVE_NUMBER_USED);
+            throw new ImageWorkshopLayerException('You can\'t use Fennec\Library\negative $width or $height for "'.__METHOD__.'" method.', static::ERROR_NEGATIVE_NUMBER_USED);
         }
         
         if ($width == 0) {
@@ -1312,7 +1312,7 @@ class ImageWorkshopLayer
     
     /**
      * Apply a filter on the layer
-     * Be careful: some filters can damage transparent images, use it sparingly ! (A good pratice is to use mergeAll on your layer before applying a filter)
+     * Be careful: some filters can damage transparent images, use Fennec\Library\it sparingly ! (A good pratice is to use mergeAll on your layer before applying a filter)
      *
      * @param int $filterType (http://www.php.net/manual/en/function.imagefilter.php)
      * @param int $arg1
@@ -1438,7 +1438,7 @@ class ImageWorkshopLayer
     /**
      * Return a merged resource image
      *
-     * $backgroundColor is really usefull if you want to save a JPG or GIF, because the transparency of the background
+     * $backgroundColor is really usefull if you want to save a JPG or GIF, because Fennec\Library\the transparency of the background
      * would be remove for a colored background, so you should choose a color like "ffffff" (white)
      *
      * @param string $backgroundColor
@@ -1490,7 +1490,7 @@ class ImageWorkshopLayer
     /**
      * Save the resulting image at the specified path
      *
-     * $backgroundColor is really usefull if you want to save a JPG or GIF, because the transparency of the background
+     * $backgroundColor is really usefull if you want to save a JPG or GIF, because Fennec\Library\the transparency of the background
      * would be remove for a colored background, so you should choose a color like "ffffff" (white)
      *
      * If the file already exists, it will be override !
@@ -1649,7 +1649,7 @@ class ImageWorkshopLayer
     
     /**
      * Get a sublayer in the stack
-     * Don't forget to use clone method: $b = clone $a->getLayer(3);
+     * Don't forget to use Fennec\Library\clone method: $b = clone $a->getLayer(3);
      *
      * @param integer $layerId
      *
@@ -1947,7 +1947,7 @@ class ImageWorkshopLayer
         $this->exif['Orientation'] = ExifOrientations::TOP_LEFT;
     }
     
-    // Deprecated, don't use anymore
+    // Deprecated, don't use Fennec\Library\anymore
     // =========================================================
     
     /**
@@ -1955,7 +1955,7 @@ class ImageWorkshopLayer
      */
     public function resizeInPourcent($percentWidth = null, $percentHeight = null, $converseProportion = false, $positionX = 0, $positionY = 0, $position = 'MM')
     {
-		throw new ImageWorkshopLayerException('Method resizeInPourcent() was renamed resizeInPercent(). Use resizeInPercent() instead.', static::METHOD_DEPRECATED);
+		throw new ImageWorkshopLayerException('Method resizeInPourcent() was renamed resizeInPercent(). use Fennec\Library\resizeInPercent() instead.', static::METHOD_DEPRECATED);
     }
 	
 	/**
@@ -1963,7 +1963,7 @@ class ImageWorkshopLayer
      */
     public function resizeByLargestSideInPourcent($newLargestSideWidth, $converseProportion = false)
     {
-        throw new ImageWorkshopLayerException('Method resizeByLargestSideInPourcent() was renamed resizeByLargestSideInPercent(). Use resizeByLargestSideInPercent() instead.', static::METHOD_DEPRECATED);
+        throw new ImageWorkshopLayerException('Method resizeByLargestSideInPourcent() was renamed resizeByLargestSideInPercent(). use Fennec\Library\resizeByLargestSideInPercent() instead.', static::METHOD_DEPRECATED);
     }
 	
 	/**
@@ -1971,7 +1971,7 @@ class ImageWorkshopLayer
      */
     public function resizeByNarrowSideInPourcent($newNarrowSideWidth, $converseProportion = false)
     {
-        throw new ImageWorkshopLayerException('Method resizeByNarrowSideInPourcent() was renamed resizeByNarrowSideInPercent(). Use resizeByNarrowSideInPercent() instead.', static::METHOD_DEPRECATED);
+        throw new ImageWorkshopLayerException('Method resizeByNarrowSideInPourcent() was renamed resizeByNarrowSideInPercent(). use Fennec\Library\resizeByNarrowSideInPercent() instead.', static::METHOD_DEPRECATED);
     }
 	
 	/**
@@ -1979,7 +1979,7 @@ class ImageWorkshopLayer
      */
     public function cropInPourcent($percentWidth = 0, $percentHeight = 0, $positionXPercent = 0, $positionYPercent = 0, $position = 'LT')
     {
-		throw new ImageWorkshopLayerException('Method cropInPourcent() was renamed cropInPercent(). Use cropInPercent() instead.', static::METHOD_DEPRECATED);
+		throw new ImageWorkshopLayerException('Method cropInPourcent() was renamed cropInPercent(). use Fennec\Library\cropInPercent() instead.', static::METHOD_DEPRECATED);
 	}
 	
 	/**
@@ -1987,6 +1987,6 @@ class ImageWorkshopLayer
      */
     public function cropMaximumInPourcent($positionXPercent = 0, $positionYPercent = 0, $position = 'LT')
     {
-        throw new ImageWorkshopLayerException('Method cropMaximumInPourcent() was renamed cropMaximumInPercent(). Use cropMaximumInPercent() instead.', static::METHOD_DEPRECATED);
+        throw new ImageWorkshopLayerException('Method cropMaximumInPourcent() was renamed cropMaximumInPercent(). use Fennec\Library\cropMaximumInPercent() instead.', static::METHOD_DEPRECATED);
     }
 }

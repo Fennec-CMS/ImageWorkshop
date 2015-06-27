@@ -1,6 +1,6 @@
 <?php
 
-namespace PHPImageWorkshop\Exif;
+namespace Fennec\Library\PHPImageWorkshop\Exif;
 
 /**
  * Container for all EXIF orientations.

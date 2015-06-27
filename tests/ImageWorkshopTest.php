@@ -1,6 +1,6 @@
 <?php
 
-use PHPImageWorkshop\ImageWorkshop as ImageWorkshop;
+use Fennec\Library\PHPImageWorkshop\ImageWorkshop as ImageWorkshop;
 
 require_once(__DIR__.'/autoload.php');
 
